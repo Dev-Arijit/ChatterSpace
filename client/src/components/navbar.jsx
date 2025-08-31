@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { MessageCircle, Menu, X } from 'lucide-react';
 
 // importing useNavigate
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -29,9 +29,9 @@ export default function Navbar() {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-6">
-            <a href="#" className="text-white hover:text-purple-300 transition">Home</a>
-            <a href="#" className="text-white hover:text-purple-300 transition">About</a>
-            <a href="#" className="text-white hover:text-purple-300 transition">Contact</a>
+            <Link to="/chat" className="text-white hover:text-purple-300 transition">Home</Link>
+            <Link to="/about" className="text-white hover:text-purple-300 transition">About</Link>
+            <Link to="/contact" className="text-white hover:text-purple-300 transition">Contact</Link>
             <button
               className="ml-4 px-4 py-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white rounded-lg hover:from-purple-600 hover:to-blue-600 transition" onClick={handleSignup}
             >
